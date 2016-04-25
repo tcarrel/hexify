@@ -37,7 +37,7 @@ void File::output(ostream& out)
                 out << " ";
         }
     }
-    out << "EOF";
+    out << "\033[1;31m" << "EOF" << "\033[0m";
 }
 
 bool File::good()
