@@ -37,6 +37,7 @@ void File::output(ostream& out)
                 out << " ";
         }
     }
+    out << "EOF";
 }
 
 bool File::good()
