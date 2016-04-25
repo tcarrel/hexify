@@ -1,3 +1,4 @@
+#include<cstring>
 #include<iostream>
 #include<fstream>
 
@@ -22,18 +23,25 @@ int main(int argc, char* argv[])
 
     if( argc == 3 )
     {
-    std::ofstream out;
+        if( !strcmp( argv[1], argv[2] ) )
+        {
+            std::cerr
+                << "\nInput and output files cannot be the same.\n" << std::endl;
+            return 1;
+        }
+        std::ofstream out;
 
-    out.open(argv[2]);
+        out.open(argv[2]);
 
-    if( !out.good() )
-        return 1;
+        if( !out.good() )
+            return 1;
 
-    file.output(out);
 
-    out.close();
+        file.output(out);
 
-    return 0;
+        out.close();
+
+        return 0;
     }
 
     file.output(std::cout);
