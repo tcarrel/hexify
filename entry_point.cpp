@@ -8,6 +8,13 @@ int main(int argc, char* argv[])
 {
     if( argc != 3 && argc != 2 )
     {
+        std::cerr
+            << "Usage:\n" 
+            << "\t" << argv[0]
+            << " <input filename> <<optional> output filename>\n"
+            << "\n"
+            << "\tIf output filename is ommitted, will print to stdout "
+            << "instead.\n" << std::endl;
         return 1;
     }
 
