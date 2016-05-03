@@ -12,8 +12,8 @@
 #
 
 CXX = g++
-DEBUG = 0
-CXXFLAGS = -g -std=c++11 -Wall -W -pedantic -Werror #-D DEBUG
+#CXXFLAGS = -g -std=c++11 -Wall -W -pedantic -Werror -time #-D DEBUG
+CXXFLAGS = -std=c++11 -Wall -W -pedantic -Werror -O3 -time
 MAIN = hexify
 GCCERREXT = gccerr
 ERROR_COPY_DIR = Errors

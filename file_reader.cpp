@@ -24,7 +24,7 @@ void File::output(ostream& out)
         {
             out
                 << "0x"
-                << setw(8) << setfill('0') << setbase(16) << i - 1 << "\t:\t";
+                << setw(8) << setfill('0') << setbase(16) << i - 1 << "  :  ";
         }
         out << setw(2) << setfill('0') << setbase(16) << (short)data_[i - 1];
         if( !(i % 20) )
@@ -37,7 +37,7 @@ void File::output(ostream& out)
                 out << " ";
         }
     }
-    out << "\033[1;31m" << "EOF" << "\033[0m";
+    out << "\033[1;31m" << "EOF" << "\033[0m\n";
 }
 
 bool File::good()
